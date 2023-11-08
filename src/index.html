@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[hsl(185,41%,84%)]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="font-space-mono font-[700] text-[hsl(186,14%,43%)]"
+  >
+    <div class="container flex-col py-5">
+      <div
+        class="grid grid-cols-4 mx-auto max-w-[200px] lg:max-w-[100px] gap-4 lg:gap-2 text-center text-4xl lg:text-2xl text-[hsl(183,100%,15%)] mb-10"
+      >
+        <span>S</span>
+        <span>P</span>
+        <span>L</span>
+        <span>I</span>
+        <span>T</span>
+        <span>T</span>
+        <span>E</span>
+        <span>R</span>
+      </div>
+      <div class="mx-auto bg-white lg:max-w-4xl card lg:flex-row">
+        <div class="flex gap-10 lg:max-w-md card-body">
+          <div class="">
+            <label
+              for="bill"
+              class="flex flex-col gap-2 after:content-['$'] after:absolute relative after:top-10 after:left-2 after:text-2xl after:text-[hsl(184,14%,56%)]"
+            >
+              Bill
+              <input
+                type="number"
+                class="input bg-[hsl(189,41%,97%)] ps-10 text-right focus:outline-[hsl(172,67%,45%)]"
+                id="bill"
+                name="bill"
+              />
+            </label>
+          </div>
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <span class="col-span-2 lg:col-span-3">Select Tip %</span>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-white text-2xl hover:bg-[hsl(172,67%,45%)] border-none"
+            >
+              5%
+            </button>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-white text-2xl hover:bg-[hsl(172,67%,45%)] border-none"
+            >
+              10%
+            </button>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-white text-2xl hover:bg-[hsl(172,67%,45%)] border-none"
+            >
+              15%
+            </button>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-white text-2xl hover:bg-[hsl(172,67%,45%)] border-none"
+            >
+              25%
+            </button>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-white text-2xl hover:bg-[hsl(172,67%,45%)] border-none"
+            >
+              50%
+            </button>
+            <input
+              type="number"
+              class="input bg-[hsl(189,41%,97%)] ps-10 text-right placeholder:uppercase placeholder:text-center focus:outline-[hsl(172,67%,45%)] lg:placeholder:text-xs"
+              placeholder="custom"
+            />
+          </div>
+          <label for="" class="relative flex flex-col gap-2">
+            <div>Number of People</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="16"
+              class="absolute top-12 left-4"
+            >
+              <path
+                fill="#9EBBBD"
+                d="M9.573 7.729c.406 0 .784.07 1.126.209.342.14.639.33.881.569.232.227.438.503.614.82a5.1 5.1 0 01.407.949c.097.312.178.654.242 1.016.062.359.105.699.126 1.011.02.307.031.624.031.945 0 .836-.259 1.512-.768 2.01-.504.492-1.17.742-1.98.742H2.748c-.81 0-1.477-.25-1.98-.742C.259 14.76 0 14.084 0 13.248c0-.322.01-.64.032-.945.02-.312.063-.652.126-1.01.063-.363.144-.705.242-1.017.1-.323.238-.643.407-.948.176-.318.382-.594.613-.821.243-.238.54-.43.882-.57.342-.138.72-.208 1.125-.208.16 0 .313.067.61.265.183.123.397.264.636.421.204.134.48.259.822.372.333.11.671.167 1.005.167a3.19 3.19 0 001.006-.167c.341-.113.618-.238.822-.372l.636-.42c.296-.2.45-.266.61-.266zM6.598 0C7.63 0 8.522.38 9.252 1.129s1.1 1.666 1.1 2.724c0 1.06-.37 1.976-1.1 2.725-.73.75-1.623 1.13-2.654 1.13-1.03 0-1.924-.38-2.653-1.13-.73-.749-1.1-1.666-1.1-2.725 0-1.058.37-1.975 1.1-2.724C4.675.379 5.567 0 6.598 0z"
+              />
+            </svg>
+            <input
+              type="number"
+              class="input bg-[hsl(189,41%,97%)] ps-10 text-right"
+            />
+          </label>
+        </div>
+        <div class="card-body">
+          <div
+            class="bg-[hsl(183,100%,15%)] rounded-lg p-5 gap-4 flex flex-col lg:justify-between lg:h-full"
+          >
+            <div class="flex flex-col gap-4 lg:gap-10">
+              <div class="flex justify-between">
+                <h2 class="flex flex-col">
+                  <span class="text-white">Tip Amount</span> / person
+                </h2>
+                <span class="text-[hsl(172,67%,45%)] lg:text-4xl">$4.27</span>
+              </div>
+              <div class="flex justify-between">
+                <h2 class="flex flex-col">
+                  <span class="text-white">Total</span> / person
+                </h2>
+                <span class="text-[hsl(172,67%,45%)] lg:text-4xl">$32.79</span>
+              </div>
+            </div>
+            <button
+              class="btn bg-[hsl(183,100%,15%)] text-[hsl(172,67%,45%)] hover:bg-[hsl(172,67%,45%)] hover:text-[hsl(183,100%,15%)] border-[hsl(172,67%,45%)]"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="my-10">
+        <div class="text-center">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="relative inline-block before:absolute before:block before:-skew-y-3 before:-inset-1 before:bg-blue-500 ms-1"
+            ><span class="relative text-white"">Frontend Mentor</span><a
+          > . Coded with ♥ by <a href="https://instagram.com/alx.dyy" target="_blank" class="relative inline-block before:absolute before:block before:-skew-y-3 before:-inset-1 before:bg-blue-500 ms-1"><span class="relative text-white">aldiipratama</span></a> .
+        </div>
+    </footer>
+  </body>
+</html>
